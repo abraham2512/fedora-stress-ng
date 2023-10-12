@@ -4,4 +4,8 @@ LABEL maintainer="Abraham Miller <apalanis@redhat.com>"
 
 RUN yum -y install stress procps-ng 
 
-CMD stress --cpu $CPU --vm $VM --vm-bytes $VM_BYTES
+COPY stress_anything.sh /stress_anything.sh
+
+RUN chmod +x /stress_anything.sh
+
+ENTRYPOINT [ "/stress_anything.sh" ]
