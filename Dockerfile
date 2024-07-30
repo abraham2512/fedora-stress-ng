@@ -8,6 +8,6 @@ COPY stress_anything.py /stress_anything.py
 
 RUN chmod +x /stress_anything.py
 
-WORKDIR /
+WORKDIR /tmp/
 
 CMD [ "python3","stress_anything.py" ]
