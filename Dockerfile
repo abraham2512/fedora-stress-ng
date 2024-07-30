@@ -2,9 +2,7 @@ FROM fedora:latest
 
 LABEL maintainer="Abraham Miller <apalanis@redhat.com>"
 
-RUN dnf install -y python3 procps
-
-RUN yum -y install stress procps-ng 
+RUN dnf install -y python3 procps stress-ng
 
 COPY stress_anything.py /stress_anything.py
 
