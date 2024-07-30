@@ -11,5 +11,5 @@ for var, value in os.environ.items():
 
 print(arguments)
 
-command = "stress " + arguments
+command = "stress-ng " + arguments
 subprocess.run(command, shell=True)
