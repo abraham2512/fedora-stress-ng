@@ -4,10 +4,10 @@ LABEL maintainer="Abraham Miller <apalanis@redhat.com>"
 
 RUN dnf install -y python3 procps stress-ng
 
-COPY stress_anything.py /tmp/stress_anything.py
-
-RUN chmod +x /stress_anything.py
-
 WORKDIR /tmp/
+
+COPY stress_anything.py stress_anything.py
+
+RUN chmod +x stress_anything.py
 
 CMD [ "python3","stress_anything.py" ]
