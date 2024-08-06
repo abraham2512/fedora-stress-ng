@@ -1,3 +1,5 @@
+# Entry script to start stressng container with args #
+# Author - Abraham Miller apalanis@redhat.com #
 import os
 import subprocess
 
